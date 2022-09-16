@@ -8,7 +8,7 @@ import { useState } from 'react';
 function DateCalc() {
   const [calValue, calSetValue] = useState(new Date())
   const [numValue, numSetValue] = useState(0)
-  const [action, setAction] = useState("")
+  const [action, setAction] = useState("Add")
 
   let FinalDate = addDays(calValue, numValue)
 
@@ -38,7 +38,7 @@ function DateCalc() {
           onChange={numSetValue}
           value={numValue}
         />
-        <SegmentedControl onChange={setAction} value={action} data={[
+        <SegmentedControl onChange={setAction} value={action} defaultValue="Add" data={[
           { label: 'Add', value: 'Add' },
           { label: 'Subtract', value: 'Subtract' },
         ]} />

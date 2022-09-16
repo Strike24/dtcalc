@@ -5,7 +5,7 @@ import { useState } from 'react';
 import TimeCalc from './timecalc';
 function App() {
 
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('Dates');
 
   return (
     <div className="App">
